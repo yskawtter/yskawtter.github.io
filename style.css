@@ -80,7 +80,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: calc(100vh - 800px);
+    padding-left: 74px;
 }
 .first-part::before {
     content: '';
@@ -404,6 +404,7 @@ a {
     background: none;
     border-top: 3px solid #fff;
     cursor: pointer;
+    z-index: 999;
 }
 .hamburguer::before, .hamburguer::after {
     content: ' ';
@@ -425,6 +426,7 @@ a {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
+    z-index: 998;
 }
 .closeOverlay {
     display: none;
@@ -556,7 +558,14 @@ a {
         padding: 12px;
     }
 } 
-
+@media(max-width: 380px) {
+    .first-part {
+        margin-top: 32px;
+    }
+    .first-part::before {
+        height: 80vh;
+    }
+}
 
 
 
